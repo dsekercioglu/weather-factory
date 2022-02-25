@@ -74,9 +74,7 @@ class SpsaTuner:
         uci_params_a = []
         uci_params_b = []
         for param, delta in zip(self.uci_params, self.delta):
-            curr_delta = param.step
-
-            step = delta * curr_delta * c_t
+            step = delta * param.step * c_t
 
             uci_a = copy.deepcopy(param)
             uci_b = copy.deepcopy(param)
